@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JQuery data Table Templete</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/jquery.dataTables.min.css" rel="stylesheet" />
+    
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <link href="Content/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery.dataTables-1.10.7.min.js"></script>
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/jquery-ui.css" rel="stylesheet" />
+    <link href="Content/admin-document-grid.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
+	<script type="text/javascript">	
+		$(document).ready(function ()
+		{
+			$('#showNPI').click(function () 
+				{    
+					$("#allNPIDiv").show();
+					$("#orgDocDiv").hide();
+				});
+			$('#showOrg').click(function () 
+				{
+					$("#allNPIDiv").hide(); 
+					$("#orgDocDiv").show();  
+				});
+			function ResetButtons() 
+			{
+				$("button").css("background-color", "#31b0d5");
+			}
+		});
+	</script>
+</head>
+<body>
+    <h2> JQuery Data Table Templete </h2>
+    <div class="row grid-font"  id="npi-grid"> 
+            <div class="panel with-nav-tabs panel-primary">
+                <div class="panel-heading">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#1" data-toggle="tab" onclick="showNPI" class="tabs" data-target="#allNPIDiv" id="showNPI">NPI Search Results</a></li>
+                        <li><a href="#2" data-toggle="tab" onclick="showOrg" class="tabs" data-target="#orgDocDiv" id="showOrg">ADPH Documents</a></li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div id="allNPIDiv" class="collapse in  tab-style">
+                            <table id="allNPIs" class="table table-hover cell-border display compact grid-font">
+                                <thead>
+                                    <tr class="tr-style">
+                                        <th class="th-style">First Name</th>
+                                        <th class="th-style">Last Name</th>
+                                        <th class="th-style">Address</th>
+                                        <th class="th-style">Date Of Birth</th>
+                                        <th class="th-style">Salary</th>
+                                    </tr>
+                                </thead>
+								<tr>
+									<td>Sample</td>
+									<td> Name</td>
+									<td>Dummy Address APT 10, Atlanta, GA</td>
+									<td>01-01-1990</td>
+									<td>$20,000</td>
+								</tr>
+								<tr>
+									<td>Sample</td>
+									<td> Name</td>
+									<td>Dummy Address APT 10, Atlanta, GA</td>
+									<td>01-01-1990</td>
+									<td>$20,000</td>
+								</tr>
+								<tr>
+									<td>Sample</td>
+									<td> Name</td>
+									<td>Dummy Address APT 10, Atlanta, GA</td>
+									<td>01-01-1990</td>
+									<td>$20,000</td>
+								</tr>
+								<tr>
+									<td>Sample</td>
+									<td> Name</td>
+									<td>Dummy Address APT 10, Atlanta, GA</td>
+									<td>01-01-1990</td>
+									<td>$20,000</td>
+								</tr>
+								<tr>
+									<td>Sample</td>
+									<td> Name</td>
+									<td>Dummy Address APT 10, Atlanta, GA</td>
+									<td>01-01-1990</td>
+									<td>$20,000</td>
+								</tr>
+                            </table>
+                        </div>
+                        <div id="orgDocDiv" class="tab-pane fade tab-style-none">
+                            <table id="orgDatatable" class="table table-hover cell-border display compact grid-font">
+                                <thead>
+                                    <tr class="tr-style">
+                                        <th class="th-style">Document</th>
+                                        <th class="th-style">Description</th>
+                                        <th class="th-style">Uploaded By</th>
+                                        <th class="th-style">Uploaded Date</th>
+                                        <th class="th-style">Document Size</th>
+                                    </tr>
+                                </thead>
+								<tr>
+									<td>Sample</td>
+									<td>Sample Document</td>
+									<td>Dummy User</td>
+									<td>01-01-2000</td>
+									<td>1 MB</td>
+								</tr>
+								<tr>
+									<td>Sample</td>
+									<td>Sample Document</td>
+									<td>Dummy User</td>
+									<td>01-01-2000</td>
+									<td>1 MB</td>
+								</tr>
+								<tr>
+									<td>Sample</td>
+									<td>Sample Document</td>
+									<td>Dummy User</td>
+									<td>01-01-2000</td>
+									<td>1 MB</td>
+								</tr>
+								<tr>
+									<td>Sample</td>
+									<td>Sample Document</td>
+									<td>Dummy User</td>
+									<td>01-01-2000</td>
+									<td>1 MB</td>
+								</tr><tr>
+									<td>Sample</td>
+									<td>Sample Document</td>
+									<td>Dummy User</td>
+									<td>01-01-2000</td>
+									<td>1 MB</td>
+								</tr>
+                            </table>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+    </div>
+</body>
+</html>
+<link href="Content/jquery-ui.css" rel="stylesheet" />
+<script src="Scripts/bootstrap.min.js"></script>
+<script src="Scripts/jquery.balloon.min.js"></script>
